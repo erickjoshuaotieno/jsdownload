@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GSAP Circular Dot Ripple</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #202e4b;
+            overflow: hidden;
+        }
+
+        .grid-container {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background-color: #2e4640;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 
+                        0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+
+        .dot {
+        position: absolute;
+        width: 9px;  /* Reduced from 24px */
+        height: 9px; /* Reduced from 24px */
+        background-color: #4fe142;
+        border-radius: 50%;
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    </style>
+</head>
+<body class="antialiased">
+    <div id="grid-container" class="grid-container"></div>
+    <script src="script.js"></script>
+</body>
+</html>
